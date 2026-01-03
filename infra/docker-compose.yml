@@ -1,0 +1,19 @@
+#it defines all the architecture the application needs and starts with one command
+#It starts Kafka, Postgres, Redis, etc. as containers on hte machine so spring
+#boot services can use them.
+
+services:
+  postgres:
+    image: postgres:15
+    container_name: mystore-postgres
+    environment:
+      POSTGRES_DB: mystore
+      POSTGRES_USER: mystore_user
+      POSTGRES_PASSWORD: mystore_pass
+    ports:
+      - "5432:5432"
+    volumes:
+      - mystore_pgdata:/var/lib/postgresql/data
+
+volumes:
+  mystore_pgdata:
