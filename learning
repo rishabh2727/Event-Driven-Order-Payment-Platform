@@ -1,0 +1,24 @@
+docker compose up -d command is for downloading the Postgres image to your machine.
+postgres Pulled
+Docker finished downloading the Postgres image to your machine.
+
+Network infra_default Created
+Docker created a private network so containers can talk to each other.
+
+Volume infra_mystore_pgdata Created
+Docker created persistent storage for your database data.
+
+Container mystore-postgres Started
+Postgres is now running in the background.
+
+----
+Docker runs Postgres the database.
+Spring Boot still needs a Java driver (JDBC) to communicate with it.
+
+added a few dependencies like postgres and starter-jpa
+
+Docker gives the database server. Maven gives Spring Boot the driver to talk to it.
+
+Spring Boot always starts from the class annotated with @SpringBootApplication; clicking Run elsewhere doesn’t change that.
+
+Milestone 1: a minimal Order Service that writes to Postgres and can be read back

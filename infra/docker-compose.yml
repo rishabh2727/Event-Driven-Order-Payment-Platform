@@ -17,3 +17,10 @@ services:
 
 volumes:
   mystore_pgdata:
+
+
+#whatever command I wrote in terminal, dockee reads this in docker compose.yml, I asked for
+#postgres image 15, it tried looking for the image locally, it did not find that, so it
+#contacted dockerhub to pull. then docker saved the image locally, it created the runtime resources
+#like the network, volume and the contsiner ,and then ran postgres inside it.
+#all I did or ask was: I want a service that uses postgres 15.
